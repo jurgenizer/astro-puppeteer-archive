@@ -1,0 +1,34 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<style>
+			.layout {
+				display: grid;
+				grid-template-rows: auto 1fr auto;
+				overflow: hidden;
+				min-height: 100vh;
+			}
+
+			.main {
+				padding: 0 0 3em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<Header />
+			<main class="main">
+				<slot />
+			</main>
+			<Footer />
+		</div>
+	</body>
+</html>
